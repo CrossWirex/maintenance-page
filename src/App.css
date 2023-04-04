@@ -1,0 +1,87 @@
+.hero-image::before {
+  content: "";
+  position: absolute;
+  background-color: #1A1B41;
+  background: linear-gradient(45deg,
+      red 0%,
+      #ff9a00 10%,
+      #d0d321 20%,
+      #4fdc4a 30%,
+      #3fdad8 40%,
+      #2fc9e2 50%,
+      #1c7fee 60%,
+      #5f15f2 70%,
+      #ba0cf8 80%,
+      #fc07d9 90%,
+      #ff0000 100%) repeat 0% 0%/ 300% 100%;
+  inset: -5px;
+  border-radius: 100%;
+  filter: blur(5px);
+  animation: rgb 7s linear infinite;
+}
+
+@keyframes rgb {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.countdown>div {
+  display: flex;
+  padding-block: 10px;
+  gap: 10px;
+}
+
+.countdown>div>div {
+  display: flex;
+  flex-direction: column;
+  background-color: #1A1B41;
+  color: white;
+  height: fit-content;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 0.75rem;
+}
+
+.time {
+  font-size: 3rem;
+  line-height: 2.5rem;
+  font-family: 'Roboto Mono', monospace;
+  transition: all 0.5s linear;
+}
+
+
+@media (max-width: 400px) {
+
+  .countdown>div>div {
+    font-size: 0.5rem;
+  }
+
+
+  .time {
+    font-size: 2rem;
+    line-height: 1.5rem;
+  }
+
+}
+
+@media (min-width:768px) {
+
+  .countdown>div>div {
+    font-size: 0.9rem;
+  }
+
+
+  .time {
+    font-size: 4.5rem;
+    line-height: 4rem;
+  }
+}
