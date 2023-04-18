@@ -1,6 +1,5 @@
 {
   "name": "maintenance--page",
-  "homepage": "https://mayor-code.github.io/maintenance-page",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
